@@ -16,6 +16,7 @@ jobs:
         with:
           github-token: ${{ secrets.CODE_OWNER_TOKEN }}
           allowed-authors: "exercism-solutions-syncer[bot]"
+          label-match-mode: "none"
 
       - name: Auto Merge
         run: gh pr merge --auto --merge "$PR_URL"
